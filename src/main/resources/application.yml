@@ -6,6 +6,8 @@ spring:
     name: eureka-service
 
 eureka:
+  server:
+    response-cache-update-interval-ms: 10000 # 10초
   client:
     register-with-eureka: false #eureka server를 registry에 등록할지 여부
     fetch-registry: false       #registry에 있는 정보들을 가져올지 여부
