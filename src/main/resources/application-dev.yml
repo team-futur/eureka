@@ -1,0 +1,13 @@
+# Spring Boot Admin
+custom:
+  server-ip: http://210.114.22.129
+spring:
+  boot:
+    admin:
+      client:
+        url: ${custom.server-ip}:8763/admin
+        instance:
+          metadata:
+            user:
+              name: admin # Admin Server에 접근하기 위한 기본 사용자 이름
+              password: admin # 비밀번호
