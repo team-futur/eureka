@@ -15,7 +15,7 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 # 3. 서버에서 이미지 불러오기
 #   docker load -i futur-eureka-image.tar
 # 4. 실행(-P : 랜덤포트 / -d : 백그라운드)
-#   docker run -it --add-host host.docker.internal:host-gateway -d -p 8761:8761 --name futur-eureka-container --network futur-network futur-eureka-image
+#   docker run -d -p 8761:8761 --network futur-network --name futur-eureka-container -e SPRING_PROFILES_ACTIVE=dev --add-host host.docker.internal:host-gateway futur-eureka-image
 # 5. 고유 포트(외부포트:내부포트)
 #   docker run -p 8080:8080 futur-eureka-image
 # 6. 로그 확인
